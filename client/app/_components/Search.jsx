@@ -40,7 +40,7 @@ const Search = ({ onSearch }) => {
               placeholder="Search By Job Title, Role"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              className="w-full p-2 outline-none font-medium leading-5 text-[#686868]"
+              className="w-full p-2 outline-none font-medium leading-5 text-[#686868] placeholder:text-[#686868]"
             />
           </div>
         </label>
@@ -53,11 +53,11 @@ const Search = ({ onSearch }) => {
               placeholder="Preferred Location"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
-              className="w-full p-2 outline-none font-medium leading-5 text-[#686868]"
+              className="w-full p-2 outline-none font-medium leading-5 text-gray-950 placeholder:text-[#686868]"
             />
           </div>
         </label>
-        <label className="md:px-3 bg-red-00 col-span-12 sm:col-span-6 lg:col-span-3 flex justify-start items-center  lg:border-r-2 border-[#EAEAEA]">
+        <label className="md:px-3 bg-red-00 col-span-12 sm:col-span-6 lg:col-span-3 flex justify-start items-center lg:border-r-2 border-[#EAEAEA]">
           <Select
             variant="unstyled"
             size="lg"
@@ -84,10 +84,10 @@ const Search = ({ onSearch }) => {
         </label>
         <label className="bg-blue-40 col-span-12 sm:col-span-6 lg:col-span-3 relative px-2 md:px-0 lg:px-2 flex flex-col items-center bg-gray-00">
           <div className="max-md:pt-2 md:absolute md:-top-3 flex justify-between items-center bg-red-30 w-full">
-            <span className="text-sm lg:text-[16px] leading-5 font-semibold">
+            <span className="text-sm lg:text-[16px] leading-5 font-semibold text-[#222222]">
               Salary Per Month
             </span>
-            <span className="text-sm lg:text-[16px] leading-5 font-semibold">
+            <span className="text-sm lg:text-[16px] leading-5 font-semibold text-[#222222]">
               ₹{salaryRange[0]}k - ₹{salaryRange[1]}k
             </span>
           </div>

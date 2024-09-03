@@ -65,8 +65,8 @@ const CreateJobForm = ({ handleNewJob, closeModel }) => {
 
   return (
     <>
-      <div className="h-full w-full p-4 sm:p-6 md:p-8">
-        <h3 className="text-2xl font-bold text-gray-900 text-center pb-10">
+      <div className="h-full w-full py-4 px-5">
+        <h3 className="text-2xl font-bold text-gray-900 text-center pb-12">
           Create Job Opening
         </h3>
 
@@ -81,7 +81,7 @@ const CreateJobForm = ({ handleNewJob, closeModel }) => {
               name="title"
               value={job.title}
               onChange={handleInputChange}
-              className="w-full rounded-lg px-3 py-3 border border-[#BCBCBC] focus:outline-[#222222]"
+              className="w-full rounded-lg px-3 py-3 border border-[#BCBCBC] focus:outline-[#222222] text-[#222222] font-semibold text-lg"
             />
           </label>
           <label className="col-span-12 md:col-span-6 flex flex-col group">
@@ -94,7 +94,7 @@ const CreateJobForm = ({ handleNewJob, closeModel }) => {
               name="company"
               value={job.company}
               onChange={handleInputChange}
-              className="w-full rounded-lg px-3 py-3 border border-[#BCBCBC] focus:outline-[#222222]"
+              className="w-full rounded-lg px-3 py-3 border border-[#BCBCBC] focus:outline-[#222222] text-[#222222] font-semibold text-lg"
             />
           </label>
           <label className="col-span-12 md:col-span-6 flex flex-col group">
@@ -107,7 +107,7 @@ const CreateJobForm = ({ handleNewJob, closeModel }) => {
               name="location"
               value={job.location}
               onChange={handleInputChange}
-              className="w-full rounded-lg px-3 py-3 border border-[#BCBCBC] focus:outline-[#222222]"
+              className="w-full rounded-lg px-3 py-3 border border-[#BCBCBC] focus:outline-[#222222]  text-[#222222] font-semibold text-lg"
             />
           </label>
           <label className="col-span-12 md:col-span-6 flex flex-col group">
@@ -136,25 +136,25 @@ const CreateJobForm = ({ handleNewJob, closeModel }) => {
             </span>
             <div className="flex flex-row items-center justify-between gap-2">
               <div className="w-full flex space-x-1 rounded-lg border border-[#BCBCBC]  ">
-                <img src="/icons/salary.svg" alt="" className="pl-1.5 pr-0.5" />
+                <img src="/icons/salary.svg" alt="" className="pl-3 pr-2" />
                 <input
                   type="text"
                   placeholder="₹0"
                   name="salaryMin"
                   value={job.salaryMin}
                   onChange={handleInputChange}
-                  className="w-full rounded-lg pl-0 pr-3 py-3 outline-none"
+                  className="w-full rounded-lg pl-0 pr-3 py-3 outline-none text-[#222222] font-semibold text-lg"
                 />
               </div>
-              <div className="w-full flex space-x-1 rounded-lg border border-[#BCBCBC] focus:outline-[#222222] ">
-                <img src="/icons/salary.svg" alt="" className="pl-1.5 pr-0.5" />
+              <div className="w-full flex space-x-1 rounded-lg border border-[#BCBCBC] focus:outline-[#222222]">
+                <img src="/icons/salary.svg" alt="" className="pl-3 pr-2" />
                 <input
                   type="text"
                   placeholder="₹12,00,000"
                   name="salaryMax"
                   value={job.salaryMax}
                   onChange={handleInputChange}
-                  className="w-full rounded-lg pl-0 pr-3 py-3 border-none outline-none focus:outline-none group-focus-within:border-green-500 "
+                  className="w-full rounded-lg pl-0 pr-3 py-3 border-none outline-none focus:outline-none  text-[#222222] font-semibold text-lg"
                 />
               </div>
             </div>
@@ -169,7 +169,7 @@ const CreateJobForm = ({ handleNewJob, closeModel }) => {
               name="deadline"
               value={job.deadline}
               onChange={handleInputChange}
-              className="w-full rounded-lg px-3 py-3 border border-[#BCBCBC] focus:outline-[#222222]"
+              className="w-full rounded-lg px-3 py-3 border border-[#BCBCBC] focus:outline-[#222222]  text-[#222222] font-semibold text-lg"
             />
           </label>
 
@@ -183,7 +183,7 @@ const CreateJobForm = ({ handleNewJob, closeModel }) => {
               value={job.description}
               onChange={handleInputChange}
               placeholder="Please share a description to let the candidate know more about the job role"
-              className="w-full rounded-lg px-3 py-3 border border-[#BCBCBC] focus:outline-[#222222]"
+              className="w-full rounded-lg px-3 py-3 border border-[#BCBCBC] focus:outline-[#222222] text-[#222222] font-semibold text-lg"
             ></textarea>
           </label>
 

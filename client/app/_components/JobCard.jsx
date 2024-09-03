@@ -25,14 +25,16 @@ const JobCard = ({ job }) => {
           />
         </div>
         <div>
-          <span className="bg-[#B0D9FF] rounded-lg py-[7px] px-[10px] font-medium text-[14px] leading-[18.9px]">
+          <span className="bg-[#B0D9FF] rounded-[10px] py-[7px] px-[10px] font-medium text-[14px] leading-[18.9px]">
             24h Ago
           </span>
         </div>
       </div>
 
-      <div className="font-bold text-xl py-4">{job.title}</div>
-      <div className="flex gap-4 items-center pb-3">
+      <div className="font-bold text-xl py-4 text-black leading-7">
+        {job.title}
+      </div>
+      <div className="flex gap-4 items-center pb-3 text-[#5A5A5A] font-medium leading-5">
         <div className="flex gap-1 items-center">
           <img src="icons/experience.png" className="h-[15.3px] w-[18.9px]" />
           <span className="text-sm 2xl:text-base">1-3 yr</span>
@@ -52,14 +54,22 @@ const JobCard = ({ job }) => {
         </div>
       </div>
 
-      <ul className="list-disc pb-2 pl-4">
+      <ul
+        role="list"
+        className="marker:text-gray-500 list-disc pb-2 pl-4 text-[#555555] font-medium leading-5"
+      >
         {/* {job.description.map((description, index) => (
           <li key={index + job._id}>{description}</li>
           ))} */}
         <li>{job.description}</li>
       </ul>
 
-      <button className="bg-[#00AAFF] hover:bg-[#00AAFF]/90 text-white w-full rounded-lg py-3 px-3 text-center">
+      <button
+        style={{
+          boxShadow: "0px 0px 14px 0px rgba(93, 93, 93, 0.15)",
+        }}
+        className="bg-[#00AAFF] hover:bg-[#00AAFF]/90 text-white w-full rounded-[10px] py-3 px-3 text-center"
+      >
         Apply Now
       </button>
     </div>
