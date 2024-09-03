@@ -1,11 +1,8 @@
+// import "../envConfig";
 const fetchAPI = async (url, options = {}) => {
-  const PORT = 4005;
-
-  const baseURL = `https://jobs-portal-task.onrender.com:${PORT}/api`;
-  // const baseURL = `http://localhost:${PORT}/api`;
-
+  // const PORT = process.env.PORT;
+  const baseURL = process.env.BACKEND_URL;
   const defaultOptions = {
-    // credentials: "include", // Include credentials - cookies, ssl certificates, http authentication etc => NOT REQUIRED IN THIS PROJECT
     headers: {
       "Content-Type": "application/json",
     },
