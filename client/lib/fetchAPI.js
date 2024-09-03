@@ -1,9 +1,9 @@
 const fetchAPI = async (url, options = {}) => {
-  // const baseURL = "https://jobs-portal-task.onrender.com/api";
+  const baseURL = "https://jobs-portal-task.onrender.com/api";
 
   // for local machine
   const PORT = 4005;
-  const baseURL = `http://localhost:${PORT}/api`;
+  // const baseURL = `http://localhost:${PORT}/api`;
   const defaultOptions = {
     headers: {
       "Content-Type": "application/json",

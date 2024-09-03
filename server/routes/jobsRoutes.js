@@ -52,7 +52,7 @@ router.post("/", async (req, res) => {
 
 /**
  * @access Public
- * @description API endpoint to fetch all the jobs available
+ * @description API endpoint to fetch all the jobs available or search for jobs
  */
 router.get("/", async (req, res) => {
   try {
@@ -72,22 +72,13 @@ router.get("/", async (req, res) => {
       query.type = { $regex: type, $options: "i" };
     }
 
-    // if (minSalary || maxSalary) {
-    //   // Search by salary range
-    //   query.salaryMin = {};
-    //   if (minSalary) query.salaryMin.$gte = parseInt(minSalary, 10);
-    //   if (maxSalary) query.salaryMax = { $lte: parseInt(maxSalary, 10) };
-    // }
-
     if (minSalary || maxSalary) {
       // Convert salary from thousands per month to lakhs per year
       const minLPA = minSalary ? parseInt(minSalary, 10) * 12 : null;
       const maxLPA = maxSalary ? parseInt(maxSalary, 10) * 12 : null;
-
       // Search by salary range
       if (minLPA || maxLPA) {
         query.$and = [];
-
         if (minLPA) {
           query.$and.push({ salaryMin: { $gte: minLPA } });
         }
@@ -98,7 +89,7 @@ router.get("/", async (req, res) => {
     }
 
     const jobs = await Job.find(query);
-    console.log("query obj=", query); // debug
+    // console.log("query obj=", query); // debug
     res.status(200).json(jobs);
   } catch (error) {
     console.log("Error fetching jobs:", error);
