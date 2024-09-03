@@ -51,7 +51,7 @@ const CreateJobForm = ({ handleNewJob, closeModel }) => {
     }
 
     // Check if salaryMin is less than or equal to salaryMax
-    if (parseInt(job.salaryMin) > parseInt(job.salaryMax)) {
+    if (parseInt(job.salaryMin, 10) > parseInt(job.salaryMax, 10)) {
       alert("Minimum salary should be less than or equal to maximum salary.");
       return false;
     }

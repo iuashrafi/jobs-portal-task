@@ -8,7 +8,7 @@ const router = express.Router();
  */
 router.post("/", async (req, res) => {
   try {
-    const {
+    let {
       title,
       company,
       location,
@@ -19,8 +19,14 @@ router.post("/", async (req, res) => {
       description,
     } = req.body;
 
+    salaryMin = parseInt(salaryMin, 10);
+    salaryMax = parseInt(salaryMax, 10);
+
     // Validate that salaryMin <= salaryMax
     if (salaryMin > salaryMax) {
+      console.log(
+        "Minimum salary should be less than or equal to maximum salary."
+      );
       return res.status(400).json({
         message:
           "Minimum salary should be less than or equal to maximum salary.",
