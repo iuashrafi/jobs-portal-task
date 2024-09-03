@@ -1,6 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Santoshi Variable";
+  src: url("/fonts/Satoshi-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Santoshi Variable";
+  src: url("/fonts/Satoshi-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Santoshi Variable";
+  src: url("/fonts/Santoshi-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* body */
+body {
+  font-family: "Santoshi Variable", sans-serif;
+}
+
 /* Navbar Styles */
 /* Create Jobs button */
 
@@ -19,24 +46,6 @@
   font-family: "Santoshi Variable", sans-serif;
 }
 
-/* dummy remove later */
-.navcontent-dummy {
-  /* Navbar main */
-
-  box-sizing: border-box;
-
-  position: absolute;
-  width: 890px;
-  height: 80px;
-  left: calc(50% - 890px / 2 + 24px);
-  top: 24px;
-
-  background: #ffffff;
-  border: 1px solid #fcfcfc;
-  box-shadow: 0px 0px 20px rgba(127, 127, 127, 0.15);
-  border-radius: 122px;
-}
-
 .navbar-container {
   border: 1px solid #fcfcfc;
   box-shadow: 0px 0px 20px rgba(127, 127, 127, 0.15);
@@ -46,12 +55,4 @@
 /* search container */
 .search-container {
   box-shadow: 0px 0px 14px 0px #c6bfbf40;
-}
-
-.custom-select {
-  border: 3px solid red;
-}
-
-.mantine-Select-input {
-  border: 3px solid red;
 }

@@ -1,5 +1,4 @@
 "use client";
-// import { IconComponents } from "@tabler/icons-react";
 import { useState } from "react";
 import { IconChevronDown } from "@tabler/icons-react";
 import { Select } from "@mantine/core";
@@ -64,15 +63,6 @@ const CreateJobForm = ({ handleNewJob, closeModel }) => {
     setJob(initialJobState);
   };
 
-  // handlers for Modal
-  // function open() {
-  //   setIsCreateJobModelOpen(true);
-  // }
-
-  // function close() {
-  //   setIsCreateJobModelOpen.close();
-  // }
-
   return (
     <>
       <div className="h-full w-full p-4 sm:p-6 md:p-8">
@@ -130,16 +120,10 @@ const CreateJobForm = ({ handleNewJob, closeModel }) => {
               withCheckIcon={false}
               placeholder="FullTime"
               data={["Internship", "FullTime", "Partime", "Contract"]}
-              classNames={
-                {
-                  // input: "custom-select",
-                  // dropdown: "custom-dropdown-class",
-                }
-              }
               comboboxProps={{ dropdownPadding: 0, shadow: "lg" }}
-              onChange={(_value, option) => {
+              onChange={(_value) => {
                 // console.log({ _value, option });
-                setJob((prev) => ({ ...prev, jobType: option.value }));
+                setJob((prev) => ({ ...prev, jobType: _value }));
               }}
               rightSectionPointerEvents="none"
               rightSection={<IconChevronDown stroke={2} />}
@@ -173,34 +157,6 @@ const CreateJobForm = ({ handleNewJob, closeModel }) => {
                   className="w-full rounded-lg pl-0 pr-3 py-3 border-none outline-none focus:outline-none group-focus-within:border-green-500 "
                 />
               </div>
-
-              {/* <div className="w-full flex space-x-1">
-                <img src="/icons/search-icon.svg" alt="" className="" />
-                <input
-                  type="text"
-                  placeholder="₹12,00,000"
-                  name="salaryMax"
-                  value={job.salaryMax}
-                  onChange={handleInputChange}
-                  className="w-full rounded-lg px-3 py-3 border border-[#BCBCBC] focus:outline-[#222222]"
-                />
-              </div> */}
-              {/* <input
-                type="number"
-                placeholder="₹0"
-                name="salaryMin"
-                value={job.salaryMin}
-                onChange={handleInputChange}
-                className="w-full rounded-lg px-3 py-3 border border-[#BCBCBC] focus:outline-[#222222]"
-              />
-              <input
-                type="number"
-                placeholder="₹12,00,000"
-                name="salaryMax"
-                value={job.salaryMax}
-                onChange={handleInputChange}
-                className="w-full rounded-lg px-3 py-3 border border-[#BCBCBC] focus:outline-[#222222]"
-              /> */}
             </div>
           </label>
 

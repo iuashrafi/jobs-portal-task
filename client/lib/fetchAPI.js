@@ -1,7 +1,9 @@
-// import "../envConfig";
 const fetchAPI = async (url, options = {}) => {
-  // const PORT = process.env.PORT;
-  const baseURL = "https://jobs-portal-task.onrender.com/api";
+  // const baseURL = "https://jobs-portal-task.onrender.com/api";
+
+  // for local machine
+  const PORT = 4005;
+  const baseURL = `http://localhost:${PORT}/api`;
   const defaultOptions = {
     headers: {
       "Content-Type": "application/json",

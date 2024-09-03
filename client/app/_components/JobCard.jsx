@@ -3,9 +3,9 @@
 const JobCard = ({ job }) => {
   return (
     <div
-      className="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3  p-4 rounded-xl bg-white"
+      className="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4 xl:col-span-3  p-4 rounded-xl bg-white"
       style={{
-        boxShadow: "0px 0px 14px 0px #D3D3D3",
+        boxShadow: "0px 0px 14px rgba(211, 211, 211, 0.15)",
         //   height: "360px"
       }}
     >
@@ -19,7 +19,7 @@ const JobCard = ({ job }) => {
           }}
         >
           <img
-            src={`/companies/${job.company}.png`}
+            src={`/companies/${job.company?.toLowerCase()}.png`}
             alt="company"
             className="h-16"
           />
@@ -35,18 +35,20 @@ const JobCard = ({ job }) => {
       <div className="flex gap-4 items-center pb-3">
         <div className="flex gap-1 items-center">
           <img src="icons/experience.png" className="h-[15.3px] w-[18.9px]" />
-          <span className="text-[1rem]">1-3 yr</span>
+          <span className="text-sm 2xl:text-base">1-3 yr</span>
         </div>
         <div className="flex gap-1 items-center">
           <img
             src="icons/location-type.png"
             className="h-[15.3px] w-[18.9px]"
           />
-          <span className="text-[1rem]">{job.location}</span>
+          <span className="text-sm 2xl:text-base">{job.location}</span>
         </div>
         <div className="flex gap-1 items-center">
           <img src="icons/stack.png" className="h-[15.3px] w-[18.9px]" />
-          <span className="text-[1rem]">{job.salaryMax} LPA</span>
+          <span className="text-sm 2xl:text-base">
+            {job.salaryMax / 100000} LPA
+          </span>
         </div>
       </div>
 
