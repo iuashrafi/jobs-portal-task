@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Navbar Styles */
+/* Create Jobs button */
+
+.nav-link {
+  font-family: "Santoshi Variable", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  text-align: left;
+}
+
+.btn-create-jobs {
+  padding: 8px 24px;
+  background: linear-gradient(180deg, #a128ff 0%, #6100ad 113.79%);
+  border-radius: 30px;
+  font-family: "Santoshi Variable", sans-serif;
+}
+
+/* dummy remove later */
+.navcontent-dummy {
+  /* Navbar main */
+
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 890px;
+  height: 80px;
+  left: calc(50% - 890px / 2 + 24px);
+  top: 24px;
+
+  background: #ffffff;
+  border: 1px solid #fcfcfc;
+  box-shadow: 0px 0px 20px rgba(127, 127, 127, 0.15);
+  border-radius: 122px;
+}
+
+.navbar-container {
+  border: 1px solid #fcfcfc;
+  box-shadow: 0px 0px 20px rgba(127, 127, 127, 0.15);
+  border-radius: 122px;
+}
+
+/* search container */
+.search-container {
+  box-shadow: 0px 0px 14px 0px #c6bfbf40;
+}
+
+.custom-select {
+  border: 3px solid red;
+}
+
+.mantine-Select-input {
+  border: 3px solid red;
+}
