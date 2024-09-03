@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { RangeSlider } from "@mantine/core";
 import { IconChevronDown } from "@tabler/icons-react";
-import { Select } from "@mantine/core";
+import { Select, rem } from "@mantine/core";
 
 const Search = ({ onSearch }) => {
   const [title, setTitle] = useState("");
@@ -30,11 +30,11 @@ const Search = ({ onSearch }) => {
   }, [title, location, type, salaryRange]);
 
   return (
-    <section className="bg-red-30 bg-white py-3  flex items-center justify-center">
-      <form className="container mx-auto lg:h-[48px] grid grid-cols-12 gap-4 bg-fuchsia-00">
-        <label className="bg-green-20 col-span-12 sm:col-span-6 lg:col-span-3 flex justify-start items-center  lg:border-r-2 border-[#EAEAEA] px-4">
+    <section className="bg-red-30 bg-white py-3 flex items-center justify-center">
+      <form className="container mx-auto lg:h-[48px] grid grid-cols-12 gap-2 md:gap-4 bg-fuchsia-30">
+        <label className="bg-green-20 col-span-12 sm:col-span-6 lg:col-span-3 flex justify-start items-center lg:border-r-2 border-[#EAEAEA] px-2.5 md:px-4">
           <img src="/icons/search-icon.svg" alt="search icon" className="" />
-          <div className="flex-grow px-3">
+          <div className="flex-grow pl-1 md:px-3">
             <input
               type="text"
               placeholder="Search By Job Title, Role"
@@ -45,9 +45,9 @@ const Search = ({ onSearch }) => {
           </div>
         </label>
 
-        <label className=" bg-green-40 col-span-12 sm:col-span-6 lg:col-span-3 flex justify-start items-center  lg:border-r-2 border-[#EAEAEA] px-4">
+        <label className=" bg-green-40 col-span-12 sm:col-span-6 lg:col-span-3 flex justify-start items-center lg:border-r-2 border-[#EAEAEA] px-2.5 md:px-4">
           <img src="icons/location-icon.svg" alt="location" className="" />
-          <div className="flex-grow px-3">
+          <div className="flex-grow pl-1 md:px-3">
             <input
               type="text"
               placeholder="Preferred Location"
@@ -57,14 +57,18 @@ const Search = ({ onSearch }) => {
             />
           </div>
         </label>
-        <label className="md:px-3 bg-red-30 col-span-12 sm:col-span-6 lg:col-span-3 flex justify-start items-center  lg:border-r-2 border-[#EAEAEA]">
+        <label className="md:px-3 bg-red-00 col-span-12 sm:col-span-6 lg:col-span-3 flex justify-start items-center  lg:border-r-2 border-[#EAEAEA]">
           <Select
             variant="unstyled"
             size="lg"
             withCheckIcon={false}
             placeholder="FullTime"
             data={["Internship", "FullTime", "Partime", "Contract"]}
-            comboboxProps={{ dropdownPadding: 0, shadow: "lg" }}
+            comboboxProps={{
+              dropdownPadding: 0,
+              shadow: "xl",
+              transitionProps: { transition: "pop", duration: 200 },
+            }}
             onChange={(_value) => setType(_value)}
             rightSectionPointerEvents="none"
             rightSection={<IconChevronDown stroke={2} />}
@@ -78,8 +82,8 @@ const Search = ({ onSearch }) => {
             }
           />
         </label>
-        <label className="bg-red-60 col-span-12 sm:col-span-6 lg:col-span-3 relative px-4 md:px-0 lg:px-2 flex flex-col items-center bg-gray-00">
-          <div className="md:absolute md:-top-3 flex justify-between items-center bg-red-30 w-full">
+        <label className="bg-blue-40 col-span-12 sm:col-span-6 lg:col-span-3 relative px-2 md:px-0 lg:px-2 flex flex-col items-center bg-gray-00">
+          <div className="max-md:pt-2 md:absolute md:-top-3 flex justify-between items-center bg-red-30 w-full">
             <span className="text-sm lg:text-[16px] leading-5 font-semibold">
               Salary Per Month
             </span>
@@ -87,7 +91,7 @@ const Search = ({ onSearch }) => {
               ₹{salaryRange[0]}k - ₹{salaryRange[1]}k
             </span>
           </div>
-          <div className=" pt-6 pb-3 w-full">
+          <div className="max-md:px-2 pt-4 md:pt-6 pb-3 w-full">
             <RangeSlider
               size={2}
               thumbSize={14}

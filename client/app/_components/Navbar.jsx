@@ -10,9 +10,18 @@ const Navbar = ({ handleNewJob, onSearch }) => {
   return (
     <>
       <div className="search-container">
-        <header className="py-5 bg-white">
-          <nav className="shadow-none w-full navbar-container  md:h-[80px] md:w-[890px] border-2 border-[#FCFCFC]   mx-auto bg-white px-[28px] py-[16px] flex items-center justify-between gap-4 rounded-full">
-            <Link href="/">
+        <header className="md:py-5 w-full bg-white ">
+          <nav
+            style={{
+              border: "1px solid #fcfcfc",
+              boxShadow: "0px 0px 20px rgba(127, 127, 127, 0.15)",
+            }}
+            className="navbar-container flex flex-col md:flex-row md:items-center md:justify-between shadow-none w-full md:h-[80px] md:w-[890px] border-2 border-[#FCFCFC] mx-auto bg-white md:px-[28px] md:py-[16px] gap-4 rounded-non md:rounded-full"
+          >
+            <Link
+              href="/"
+              className="bg-purple-40 max-md:pt-1 flex items-center justify-center"
+            >
               <Image
                 src="/logo.png"
                 height={44}
@@ -21,20 +30,20 @@ const Navbar = ({ handleNewJob, onSearch }) => {
                 title="CyberMind Works"
               />
             </Link>
-            <ul className="flex flex-col sm:flex-row flex-grow gap-4 justify-around bg-red-30 ">
-              <li>
+            <ul className="flex flex-wrap flex-grow md:gap-4 justify-around bg-red-40">
+              <li className="bg-fuchsia-60">
                 <Link
                   href="/"
-                  className="text-[#303030] text-[1rem] font-semibold leading-6"
+                  className="text-[#303030] text-sm md:text-base font-semibold leading-6"
                 >
                   Home
                 </Link>
               </li>
 
-              <li>
+              <li className=" bg-fuchsia-60">
                 <Link
                   href="#"
-                  className="text-[#303030] text-[1rem] font-semibold leading-6"
+                  className="text-[#303030] text-sm md:text-base font-semibold leading-6"
                 >
                   Find Jobs
                 </Link>
@@ -42,7 +51,7 @@ const Navbar = ({ handleNewJob, onSearch }) => {
               <li>
                 <Link
                   href="#"
-                  className="text-[#303030] text-[1rem] font-semibold leading-6"
+                  className="text-[#303030] text-sm md:text-base font-semibold leading-6"
                 >
                   Find Talents
                 </Link>
@@ -50,7 +59,7 @@ const Navbar = ({ handleNewJob, onSearch }) => {
               <li>
                 <Link
                   href="#"
-                  className="text-[#303030] text-[1rem] font-semibold leading-6"
+                  className="text-[#303030] text-sm md:text-base font-semibold leading-6"
                 >
                   About us
                 </Link>
@@ -58,7 +67,7 @@ const Navbar = ({ handleNewJob, onSearch }) => {
               <li>
                 <Link
                   href="#"
-                  className="text-[#303030] text-[1rem] font-semibold leading-6"
+                  className="text-[#303030] text-sm md:text-base font-semibold leading-6"
                 >
                   Testimonials
                 </Link>
@@ -70,7 +79,11 @@ const Navbar = ({ handleNewJob, onSearch }) => {
                   setIsCreateJobModelOpen.open();
                 }
               }}
-              className="btn-create-jobs bg-blue-500 text-white font-semibold leading-6"
+              className="rounded-lg py-1.5 md:py-[8px] md:px-[24px] md:rounded-[30px] text-white font-semibold leading-6"
+              style={{
+                background:
+                  "linear-gradient(180deg, #A128FF 0%, #6100DF 113.79%)",
+              }}
             >
               Create Jobs
             </button>
@@ -84,6 +97,7 @@ const Navbar = ({ handleNewJob, onSearch }) => {
         onClose={setIsCreateJobModelOpen.close}
         withCloseButton={false}
         size={"xl"}
+        radius={16}
       >
         <CreateJobForm
           handleNewJob={handleNewJob}

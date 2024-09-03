@@ -59,7 +59,7 @@ const JobCard = ({ job }) => {
         <li>{job.description}</li>
       </ul>
 
-      <button className="bg-[#00AAFF] text-white w-full rounded-lg py-3 px-3 text-center">
+      <button className="bg-[#00AAFF] hover:bg-[#00AAFF]/90 text-white w-full rounded-lg py-3 px-3 text-center">
         Apply Now
       </button>
     </div>

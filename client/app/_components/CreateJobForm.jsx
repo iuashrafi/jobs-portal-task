@@ -189,7 +189,7 @@ const CreateJobForm = ({ handleNewJob, closeModel }) => {
 
           <div className="col-span-12 flex justify-between items-center pt-6">
             <button
-              className="bg-white border-[1.5px] border-[#222222]  py-2 md:py-4  px-3 sm:px-4  md:px-[60px] rounded-[10px]  flex items-center space-x-3"
+              className="bg-white hover:bg-gray-900/10 border-[1.5px] border-[#222222]  py-2 md:py-4  px-3 sm:px-4  md:px-[60px] rounded-[10px]  flex items-center space-x-3"
               onClick={(e) => {
                 e.preventDefault();
               }}
@@ -201,7 +201,7 @@ const CreateJobForm = ({ handleNewJob, closeModel }) => {
             </button>
             <button
               onClick={handleSubmit}
-              className="bg-[#00AAFF]  py-2 md:py-4 px-3 sm:px-4  md:px-[60px] rounded-[10px] flex items-center space-x-3"
+              className="bg-[#00AAFF] hover:bg-[#00AAFF]/90 py-2 md:py-4 px-3 sm:px-4  md:px-[60px] rounded-[10px] flex items-center space-x-3"
             >
               <span className="text-base sm:text-lg md:text-xl text-white font-semibold">
                 Publish
