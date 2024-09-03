@@ -1,6 +1,9 @@
 const fetchAPI = async (url, options = {}) => {
   const PORT = 4005;
-  const baseURL = `http://localhost:${PORT}/api`;
+
+  const baseURL = `https://jobs-portal-task.onrender.com:${PORT}/api`;
+  // const baseURL = `http://localhost:${PORT}/api`;
+
   const defaultOptions = {
     // credentials: "include", // Include credentials - cookies, ssl certificates, http authentication etc => NOT REQUIRED IN THIS PROJECT
     headers: {
