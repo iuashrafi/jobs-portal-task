@@ -30,7 +30,10 @@ const Search = ({ onSearch }) => {
   }, [title, location, type, salaryRange]);
 
   return (
-    <section className="bg-red-30 bg-white py-3 flex items-center justify-center">
+    <section
+      id="search_container"
+      className="bg-red-30 bg-white py-3 flex items-center justify-center"
+    >
       <form className="container mx-auto lg:h-[48px] grid grid-cols-12 gap-2 md:gap-4 bg-fuchsia-30">
         <label className="bg-green-20 col-span-12 sm:col-span-6 lg:col-span-3 flex justify-start items-center lg:border-r-2 border-[#EAEAEA] px-2.5 md:px-4">
           <img src="/icons/search-icon.svg" alt="search icon" className="" />
