@@ -3,8 +3,9 @@ import Image from "next/image";
 import Search from "./Search";
 import { useDisclosure } from "@mantine/hooks";
 import { Modal } from "@mantine/core";
-import CreateJobForm from "./CreateJobForm";
+// import CreateJobForm from "./CreateJobForm";
 import Link from "next/link";
+import CreateJobForm2 from "./CreateJobForm2";
 const Navbar = ({ handleNewJob, onSearch }) => {
   const [isCreateJobModalOpen, setIsCreateJobModelOpen] = useDisclosure(false);
   return (
@@ -99,7 +100,7 @@ const Navbar = ({ handleNewJob, onSearch }) => {
         size={"xl"}
         radius={16}
       >
-        <CreateJobForm
+        <CreateJobForm2
           handleNewJob={handleNewJob}
           closeModel={() => {
             setIsCreateJobModelOpen.close();
